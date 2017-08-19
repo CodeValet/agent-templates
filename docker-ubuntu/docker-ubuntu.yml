@@ -1,0 +1,12 @@
+---
+size: 'Standard_A4'
+labels:
+  - 'docker'
+  - 'linux'
+  - 'ubuntu-16.04'
+  - 'ubuntu'
+image:
+  type: builtin
+  name: 'Ubuntu 16.04 LTS'
+executors: 1
+initscript: 'curl -sSL https://get.docker.com/ > d.sh && sh d.sh && apt-get update &&  apt-get install -qy git make && usermod -aG docker jenkins'
