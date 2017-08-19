@@ -1,0 +1,9 @@
+= Code Valet Agent Templates
+
+Collection of templates for Code Valet agents. These templates will match to
+available labels and templates available for Code Valet masters running on
+link:http://codevalet.io[Code Valet]
+
+== Format
+
+NOTE: This is still being defined
