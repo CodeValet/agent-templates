@@ -28,7 +28,7 @@
         {
             "type" : "shell",
             "inline" : [
-                "sudo ASSUME_ALWAYS_YES=yes pkg install -y openjdk8"
+                "sudo ASSUME_ALWAYS_YES=yes pkg install -y openjdk8 bash go gmake"
             ]
         },
         {
