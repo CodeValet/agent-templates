@@ -20,7 +20,7 @@ all: validate
 
 .azure.json:
 	echo ">> .azure.json doesn't exist, you'll probably want to generate it yourself"
-	touch .azure.json
+	echo '{}' > .azure.json
 
 clean:
 
