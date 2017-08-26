@@ -1,12 +1,13 @@
 ---
-size: 'Standard_A4'
+description: 'Azure-based Ubuntu 16.04 machine with Docker-enabled'
+size: 'Standard_DS4_v2'
 labels:
   - 'docker'
   - 'linux'
-  - 'ubuntu-16.04'
   - 'ubuntu'
-image:
-  type: builtin
-  name: 'Ubuntu 16.04 LTS'
+  - 'ubuntu-16.04'
 executors: 1
-initscript: 'curl -sSL https://get.docker.com/ > d.sh && sh d.sh && apt-get update &&  apt-get install -qy git make && usermod -aG docker jenkins'
+retention: 10
+initscript: 'usermod -aG docker jenkins'
+image:
+  vhd: 'https://codevaletvhds.blob.core.windows.net/system/Microsoft.Compute/Images/images/packer-osDisk.1988366a-5fa8-43de-8af1-f33158e2f352.vhd'·

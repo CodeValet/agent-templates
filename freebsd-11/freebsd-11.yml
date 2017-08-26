@@ -1,0 +1,10 @@
+---
+description: 'Azure-based FreeBSD 11.1 machine'
+size: 'Standard_DS4_v2'
+labels:
+  - 'freebsd'
+  - 'bsd'
+executors: 1
+retention: 10
+image:
+  vhd: 'https://codevaletvhds.blob.core.windows.net/system/Microsoft.Compute/Images/images/packer-osDisk.bc34e6b3-407e-4d45-b5f7-50fe44d5e77d.vhd'
