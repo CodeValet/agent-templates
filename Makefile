@@ -1,6 +1,6 @@
 
 
-validate: validate-yaml
+validate: validate-yaml .azure.json
 	for t in $(shell find . -iname "*.packer.json" -type f); do \
 		./scripts/packer validate --var-file=.azure.json $$t; \
 	done;
@@ -17,6 +17,10 @@ all: validate
 	for t in $(shell find . -iname "*.packer.json" -type f); do \
 		./scripts/packer build --var-file=.azure.json $$t; \
 	done;
+
+.azure.json:
+	echo ">> .azure.json doesn't exist, you'll probably want to generate it yourself"
+	touch .azure.json
 
 clean:
 

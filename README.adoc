@@ -1,5 +1,7 @@
 = Code Valet Agent Templates
 
+image::http://codevalet.codevalet.io/job/CodeValet/job/agent-templates/job/master/badge/icon[Build status, link=http://codevalet.codevalet.io/blue/organizations/jenkins/CodeValet%2Fagent-templates/activity]
+
 Collection of templates for Code Valet agents. These templates will match to
 available labels and templates available for Code Valet masters running on
 link:http://codevalet.io[Code Valet]
