@@ -10,4 +10,4 @@ executors: 1
 retention: 10
 initscript: 'usermod -aG docker jenkins'
 image:
-  vhd: 'https://codevaletvhds.blob.core.windows.net/system/Microsoft.Compute/Images/images/packer-osDisk.1988366a-5fa8-43de-8af1-f33158e2f352.vhd'·
+  vhd: 'https://codevaletvhds.blob.core.windows.net/system/Microsoft.Compute/Images/images/packer-osDisk.1988366a-5fa8-43de-8af1-f33158e2f352.vhd'
