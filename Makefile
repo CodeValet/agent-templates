@@ -8,7 +8,7 @@ validate: validate-yaml .azure.json
 validate-yaml:
 	for t in $(shell find . -iname "*.yml" -type f); do \
 		echo ">> Validating $$t"; \
-		docker run --rm -ti -v $$PWD:$$PWD -w $$PWD \
+		docker run --rm -v $$PWD:$$PWD -w $$PWD \
 			ruby:2-alpine ruby -e "require 'yaml'; puts YAML.load(File.read('$$t'));"; \
 	done;
 
