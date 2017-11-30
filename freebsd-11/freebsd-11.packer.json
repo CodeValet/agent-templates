@@ -9,7 +9,7 @@
             "tenant_id" : "{{user `azure_tenant_id`}}",
 
             "resource_group_name": "azureagents-for-codevalet",
-            "storage_account": "codevaletvhds",
+            "storage_account": "codevaletimages",
 
             "capture_container_name": "images",
             "capture_name_prefix": "packer",
@@ -20,8 +20,8 @@
             "image_offer": "FreeBSD",
             "image_sku": "11.1",
 
-            "location": "East US 2",
-            "vm_size": "Standard_A4"
+            "location": "West US",
+            "vm_size": "Standard_DS2_v2"
         }
     ],
     "provisioners" : [
