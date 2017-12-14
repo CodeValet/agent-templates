@@ -1,0 +1,39 @@
+{
+  "builders": [{
+    "type": "azure-arm",
+    "subscription_id": "{{user `azure_subscription_id`}}",
+    "client_id": "{{user `azure_client_id`}}",
+    "client_secret": "{{user `azure_client_secret`}}",
+    "tenant_id" : "{{user `azure_tenant_id`}}",
+    "object_id" : "{{user `azure_object_id`}}",
+
+    "resource_group_name": "azureagents-for-codevalet",
+    "storage_account": "codevaletimages",
+
+    "capture_container_name": "images",
+    "capture_name_prefix": "packer",
+
+    "os_type": "Windows",
+    "image_publisher": "MicrosoftWindowsServer",
+    "image_offer": "WindowsServer",
+    "image_sku": "2016-Datacenter",
+
+    "communicator": "winrm",
+    "winrm_use_ssl": "true",
+    "winrm_insecure": "true",
+    "winrm_timeout": "3m",
+    "winrm_username": "packer",
+
+
+    "location": "West US",
+    "vm_size": "Standard_DS2_v2"
+  }],
+  "provisioners": [{
+    "type": "powershell",
+    "inline": [
+      "Add-WindowsFeature Web-Server",
+      "if( Test-Path $Env:SystemRoot\\windows\\system32\\Sysprep\\unattend.xml ){ rm $Env:SystemRoot\\windows\\system32\\Sysprep\\unattend.xml -Force}",
+      "& $Env:SystemRoot\\System32\\Sysprep\\Sysprep.exe /oobe /generalize /shutdown /quiet"
+    ]
+  }]
+}

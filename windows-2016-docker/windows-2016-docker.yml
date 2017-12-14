@@ -1,0 +1,10 @@
+---
+description: 'Azure-based Windows 2016 machine'
+size: 'Standard_DS4_v2'
+labels:
+  - 'windows'
+  - 'windows2016'
+executors: 1
+retention: 10
+image:
+  vhd: 'https://codevaletimages.blob.core.windows.net/system/Microsoft.Compute/Images/images/packer-osDisk.d80e15cb-b63d-45e6-91bd-6b7d3f5968f4.vhd'
