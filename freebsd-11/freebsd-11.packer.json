@@ -27,17 +27,17 @@
     "provisioners" : [
         {
             "type" : "shell",
-            "inline" : [
-                "sudo ASSUME_ALWAYS_YES=yes pkg install -y openjdk8 bash go gmake"
-            ]
-        },
-        {
-            "type" : "shell",
             "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'",
             "inline_shebang": "/bin/sh -x",
             "inline" : [
                 "echo 'fdesc  /dev/fd fdescfs rw 0 0' >> /etc/fstab",
                 "echo 'proc /proc procfs rw 0 0' >> /etc/fstab"
+            ]
+        },
+        {
+            "type" : "shell",
+            "inline" : [
+                "sudo ASSUME_ALWAYS_YES=yes pkg install -y openjdk8 bash go gmake"
             ]
         },
         {
@@ -47,6 +47,7 @@
             ],
             "inline_shebang": "/bin/sh -x",
             "type": "shell",
+            "expect_disconnect": true,
             "skip_clean" : true
         }
     ]

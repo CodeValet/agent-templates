@@ -7,4 +7,4 @@ labels:
 executors: 1
 retention: 10
 image:
-  vhd: 'https://codevaletvhds.blob.core.windows.net/system/Microsoft.Compute/Images/images/packer-osDisk.bc34e6b3-407e-4d45-b5f7-50fe44d5e77d.vhd'
+  vhd: 'https://codevaletimages.blob.core.windows.net/system/Microsoft.Compute/Images/images/packer-osDisk.347e8a79-ddeb-4274-83a0-17110c83bf37.vhd'
